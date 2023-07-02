@@ -1,1 +1,2 @@
 # project-etch-a-sketch
+This is Project Etch-a-sketch. The user can draw within a grid container of square divs by hovering their mouse over the divs. The page loads a default 16x16 grid. The grid size can be changed by clicking a button that prompts the user to input how many squares they want for the new grid. The square divs shrink or grow to so that the grid container remains the same size. 
