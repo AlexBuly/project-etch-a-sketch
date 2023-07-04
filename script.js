@@ -19,3 +19,16 @@ A button is used to change the size of the grid squares. A loop is applied to sh
 squares by so many pixels and add/remove the appropriate number of squares to match the number of 
 squares the user wants. 
 */
+
+// FOR i = gridSquares; i is less than or equal to 16; i++; 16 times
+// flex-direction: column;
+// gridSquares hover fades in and out 
+// add hover class 
+// remove original class 
+// add click event listener for button 
+// prompt("Number of squares")
+// IF number > 100 
+    //alert("Number is too large")
+// grow by X && shrink by X 
+// add appropriate numbers of squares 
+
