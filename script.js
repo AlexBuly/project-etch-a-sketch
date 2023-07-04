@@ -26,10 +26,11 @@ for (let l = 0; l < 16; ++l) {
     for (let i = 0; i < 16; ++i) {
         const squareDivs = document.createElement("div");
         squareDivs.classList.add("squareDivs");
-        squareDivs.style.cssText = "height: 31.5px; width: 31.5px; border: 3px solid black;";
+        squareDivs.style.cssText = "height: 30.3px; width: 30.3px; border: 3px solid black; border-top: none; border-left: none;";
         container.appendChild(squareDivs);
     }
 }
+
 // flex-direction: column;
 // gridSquares hover fades in and out 
 // add hover class 

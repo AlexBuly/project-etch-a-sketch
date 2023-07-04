@@ -1,11 +1,14 @@
 .container {
-    height: 600px;
-    width: 600px; 
+    height: 529px;
+    width: 533.5px; 
+    border-left: 3px solid black;
+    border-top: 3px solid black;
     min-height: auto;
     min-width: auto;
     margin: auto;
-    margin-top: 70px;
+    margin-top: 100px;
     margin-bottom: 100%;
+    padding-top: 1px;
 }
 
 html {
@@ -20,4 +23,5 @@ body {
 
   .squareDivs {
     display: inline-flex;
+    margin-top: -4px;
   }
