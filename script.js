@@ -19,8 +19,24 @@ A button is used to change the size of the grid squares. A loop is applied to sh
 squares by so many pixels and add/remove the appropriate number of squares to match the number of 
 squares the user wants. 
 */
+const container = document.querySelector(".container");
 
 // FOR i = gridSquares; i is less than or equal to 16; i++; 16 times
+
+for (let i = 0; i < 16; ++i) {
+    const squareDivs = document.createElement("div");
+    squareDivs.classList.add("squareDivs");
+    squareDivs.style.cssText = "height: 31.5px; width: 31.5px; border: 3px solid black;";
+    container.appendChild(squareDivs);
+}
+
+for (let i = 0; i < 16; ++i) {
+    const squareDivs = document.createElement("div");
+    squareDivs.classList.add("squareDivs");
+    squareDivs.style.cssText = "height: 31.5px; width: 31.5px; border: 3px solid black;";
+    container.appendChild(squareDivs);
+}
+
 // flex-direction: column;
 // gridSquares hover fades in and out 
 // add hover class 
