@@ -7,10 +7,9 @@ h1 {
     width: 533.3px;
     border-left: 3px solid black;
     border-top: 3px solid black;
-    margin-left: 0px;
     margin-right: 15px;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 25px;
+    margin-bottom: 25px;
     padding-top: 4px;
 }
 
@@ -38,3 +37,11 @@ body {
  button {
   cursor: pointer;
  }
+
+ .gridSize {
+    width: 540px;
+    display: flex;
+    justify-content: center;
+ }
+
+ 
