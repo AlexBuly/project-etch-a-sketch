@@ -31,11 +31,25 @@ for (let l = 0; l < 16; ++l) {
         squareDivs.addEventListener("mouseover", () =>{
             squareDivs.style.backgroundColor = "black";
         });
+        const eraser = document.querySelector(".erase");
+        eraser.addEventListener("click", () =>{ 
+            squareDivs.addEventListener("mouseover",() =>{
+                squareDivs.style.backgroundColor = "white";
+            });
+        });
+        const reset = document.querySelector(".eraseAll");
+        reset.addEventListener("click", () =>{
+            squareDivs.style.backgroundColor = "white";
+        });
+        const draw = document.querySelector(".pen");
+        draw.addEventListener("click", () =>{
+            squareDivs.addEventListener("mouseover", () =>{
+                squareDivs.style.backgroundColor = "black";
+            });
+        })
     }
 }
-// gridSquares hover
-// remove original class 
-// add click event listener for button 
+// add click event listener for buttons
 // prompt("Number of squares")
 // IF number > 100 
     //alert("Number is too large")
