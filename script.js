@@ -28,12 +28,12 @@ for (let l = 0; l < 16; ++l) {
         squareDivs.classList.add("squareDivs");
         squareDivs.style.cssText = "height: 30.3px; width: 30.3px; border: 3px solid black; border-top: none; border-left: none;";
         container.appendChild(squareDivs);
+        squareDivs.addEventListener("mouseover", () =>{
+            squareDivs.style.backgroundColor = "black";
+        });
     }
 }
-
-// flex-direction: column;
-// gridSquares hover fades in and out 
-// add hover class 
+// gridSquares hover
 // remove original class 
 // add click event listener for button 
 // prompt("Number of squares")
