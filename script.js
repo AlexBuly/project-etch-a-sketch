@@ -46,7 +46,17 @@ for (let l = 0; l < 16; ++l) {
             squareDivs.addEventListener("mouseover", () =>{
                 squareDivs.style.backgroundColor = "black";
             });
-        })
+        });
+        const adjustSize = document.querySelector(".adjustSize");
+        adjustSize.addEventListener("click", () => {
+            const num = prompt("How many squares?");
+            if (num > 100) {
+                squareDivs.textContent = num;
+            }
+             else if (num < 100) {
+                alert("Number is too large");
+             }
+        });
     }
 }
 // add click event listener for buttons
