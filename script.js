@@ -19,39 +19,36 @@ A button is used to change the size of the grid squares. A loop is applied to sh
 squares by so many pixels and add/remove the appropriate number of squares to match the number of 
 squares the user wants. 
 */
-const container = document.querySelector(".container");
+var container = document.querySelector(".container");
 // FOR i = gridSquares; i is less than or equal to 16; i++; 16 times
-for (let l = 0; l < 16; ++l) {
-    for (let i = 0; i < 16; ++i) {
-        const squareDivs = document.createElement("div");
-        squareDivs.classList.add("squareDivs");
-        squareDivs.style.cssText = "height: 30.3px; width: 30.3px; border: 3px solid black; border-top: none; border-left: none;";
-        container.appendChild(squareDivs);
+for (let i = 0; i < 256; ++i) {
+    let squareDivs = document.createElement("div");
+    squareDivs.classList.add("squareDivs");
+    container.appendChild(squareDivs);
+    squareDivs.style.cssText = "height: 30.3px; width: 30.3px; border: 3px solid black; border-top: none; border-left: none;";
+    squareDivs.addEventListener("mouseover", () => {
+        squareDivs.style.backgroundColor = "black";
+    });
+    var eraser = document.querySelector(".erase");
+    eraser.addEventListener("click", () =>{ 
+        squareDivs.addEventListener("mouseover",() =>{
+            squareDivs.style.backgroundColor = "white";
+        });
+    });
+    var reset = document.querySelector(".eraseAll");
+    reset.addEventListener("click", () =>{
+        squareDivs.style.backgroundColor = "white";
+    });
+    var draw = document.querySelector(".pen");
+    draw.addEventListener("click", () =>{
         squareDivs.addEventListener("mouseover", () =>{
             squareDivs.style.backgroundColor = "black";
         });
-        const eraser = document.querySelector(".erase");
-        eraser.addEventListener("click", () =>{ 
-            squareDivs.addEventListener("mouseover",() =>{
-                squareDivs.style.backgroundColor = "white";
-            });
-        });
-        const reset = document.querySelector(".eraseAll");
-        reset.addEventListener("click", () =>{
-            squareDivs.style.backgroundColor = "white";
-        });
-        const draw = document.querySelector(".pen");
-        draw.addEventListener("click", () =>{
-            squareDivs.addEventListener("mouseover", () =>{
-                squareDivs.style.backgroundColor = "black";
-            });
-        });
-        const adjustSize = document.querySelector(".adjustSize");
-        adjustSize.addEventListener("click", () => {
-            squareDivs.classList.remove("squareDivs");
-        });
-    }
-}
+    });
+    }  
+
+
+  
 
 // add click event listener for buttons
 // prompt("Number of squares")
