@@ -25,7 +25,7 @@ for (let i = 0; i < 256; ++i) {
     var squareDivs = document.createElement("div");
     squareDivs.classList.add("squareDivs");
     container.appendChild(squareDivs);
-    squareDivs.style.cssText = "height: 30.3px; width: 30.3px; border: 3px solid black; border-top: none; border-left: none;";
+    squareDivs.style.cssText = "height: 29.5px; width: 29.5px; border: 3px solid black; border-top: none; border-left: none; display: inline-flex; margin-top: -4px;";
   }
   container.addEventListener("mouseover", (event) => {
     var target = event.target;
