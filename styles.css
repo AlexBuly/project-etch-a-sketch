@@ -1,5 +1,8 @@
 h1 {
   text-align: center;
+  color: #ffff66;
+  font-family: "DotGothic16", sans-serif;
+  font-size: 45px;
 }
 
 .container {
@@ -20,6 +23,7 @@ html {
 body {
     width: 520px;
     margin: auto;
+    background-color: #3399ff
   }
 
  .buttons {
@@ -29,6 +33,15 @@ body {
 
  button {
   cursor: pointer;
+  background-color: #ffff66;
+  border: 2px solid black;
+  border-radius: 5px;
+  font-family: "VT323", monospace;
+  font-size: 20px;
+ }
+
+ button:hover {
+  background-color: #e6e600;
  }
 
  .gridSize {
