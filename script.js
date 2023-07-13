@@ -20,13 +20,12 @@ squares by so many pixels and add/remove the appropriate number of squares to ma
 squares the user wants. 
 */
 const container = document.querySelector(".container");
-var squareDivs;
 // FOR i = gridSquares; i is less than or equal to 16; i++; 16 times
-for (i = 0; i < 256; ++i) {
-  squareDivs = document.createElement("div");
+for (let i = 0; i < 256; ++i) {
+  var squareDivs = document.createElement("div");
   squareDivs.classList.add("squareDivs");
   container.appendChild(squareDivs);
-  squareDivs.style.cssText = "background-color: white; height: 29.5px; width: 29.5px; border: 3px solid black; border-top: none; border-left: none; display: inline-flex; margin-top: -4px;";
+  squareDivs.style.cssText = "background-color: white; height: 29.5px; width: 29.5px; display: inline-flex; border: 3px solid black; border-top: none; border-left: none; margin-top: -4px;"
 }
   container.addEventListener("mouseover", (event) => {
     var target = event.target;
@@ -60,11 +59,16 @@ for (i = 0; i < 256; ++i) {
       }
     });
   });
+  let adjustSize = document.querySelector(".adjustSize");
+  let squares = document.querySelectorAll(".squareDivs");
+  adjustSize.addEventListener("click", () => {
+    squares.forEach((item) => {
+      item.remove();
+    });
+  });
+
   
 
-
-
-// add click event listener for buttons
 // prompt("Number of squares")
 // IF number > 100 
     //alert("Number is too large")
