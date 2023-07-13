@@ -20,13 +20,14 @@ squares by so many pixels and add/remove the appropriate number of squares to ma
 squares the user wants. 
 */
 const container = document.querySelector(".container");
+var squareDivs;
 // FOR i = gridSquares; i is less than or equal to 16; i++; 16 times
-for (let i = 0; i < 256; ++i) {
-    var squareDivs = document.createElement("div");
-    squareDivs.classList.add("squareDivs");
-    container.appendChild(squareDivs);
-    squareDivs.style.cssText = "background-color: white; height: 29.5px; width: 29.5px; border: 3px solid black; border-top: none; border-left: none; display: inline-flex; margin-top: -4px;";
-  }
+for (i = 0; i < 256; ++i) {
+  squareDivs = document.createElement("div");
+  squareDivs.classList.add("squareDivs");
+  container.appendChild(squareDivs);
+  squareDivs.style.cssText = "background-color: white; height: 29.5px; width: 29.5px; border: 3px solid black; border-top: none; border-left: none; display: inline-flex; margin-top: -4px;";
+}
   container.addEventListener("mouseover", (event) => {
     var target = event.target;
     if (target.classList.contains("squareDivs")) {
@@ -59,15 +60,8 @@ for (let i = 0; i < 256; ++i) {
       }
     });
   });
-  var buttons = document.querySelectorAll("button");
-  buttons.forEach((button) => {
-    button.addEventListener("mousedown", () => {
-      button.style.backgroundColor = " #cccc00";
-    });
-     button.addEventListener("mouseup", () => {
-      button.style.backgroundColor = "#ffff66"
-     })
-  });
+  
+
 
 
 // add click event listener for buttons
