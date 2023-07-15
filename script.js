@@ -71,11 +71,11 @@ for (let i = 0; i < 256; ++i) {
     squares.forEach((item) => {
       item.remove();
     });
-    for (let c = 0; c < 8; ++c) {
-      var square = document.createElement("div");
-      square.classList.add(".sqaure");
-      container.appendChild(square);
-      square.style.cssText = "background-color: white; height: 29.5px; width: 29.5px; display: inline-flex; border: 3px solid black; border-top: none; border-left: none; margin-top: -4px;";
+    let num = parseInt(prompt("How many squares?"))
+    if (num < 100) {
+      // Create new grid 
+    } else if (num > 100) {
+        alert("Number is too large");
     }
   });
 
