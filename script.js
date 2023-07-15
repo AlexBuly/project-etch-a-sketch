@@ -28,9 +28,11 @@ for (let i = 0; i < 256; ++i) {
   squareDivs.style.cssText = "background-color: white; height: 29.5px; width: 29.5px; display: inline-flex; border: 3px solid black; border-top: none; border-left: none; margin-top: -4px;"
 }
   container.addEventListener("mouseover", (event) => {
-    var target = event.target;
+    var target = event.target
     if (target.classList.contains("squareDivs")) {
       target.style.backgroundColor = "black";
+    } else {
+        target.style.backgroundColor = "black";
     }
   });
   // add click event listener for buttons
@@ -40,6 +42,8 @@ for (let i = 0; i < 256; ++i) {
       var target = event.target;
       if (target.classList.contains("squareDivs")) {
         target.style.backgroundColor = "white";
+      } else {
+          target.style.backgroundColor = "white";
       }
     });
   });
@@ -48,7 +52,7 @@ for (let i = 0; i < 256; ++i) {
     var squares = document.querySelectorAll(".squareDivs");
     squares.forEach((item) => {
       item.style.backgroundColor = "white";
-    });
+   });
   });
   var draw = document.querySelector(".pen");
   draw.addEventListener("click", () => {
@@ -56,6 +60,8 @@ for (let i = 0; i < 256; ++i) {
       var target = event.target;
       if (target.classList.contains("squareDivs")) {
         target.style.backgroundColor = "black";
+      } else {
+          target.style.backgroundColor = "black"
       }
     });
   });
