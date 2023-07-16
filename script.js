@@ -63,10 +63,15 @@ for (let i = 0; i < 256; ++i) {
     squares.forEach((item) => {
       item.remove();
     });
-    let num = parseInt(prompt("How many squares?"))
-    if (num < 100) {
-      // Create new grid 
-    } else if (num > 100) {
+    let size = parseInt(prompt("How many squares?"))
+    if (size < 100) {
+      for (let n = 0; n < size; ++n)  {
+        let gridSquares = document.createElement("div");
+        gridSquares.classList.add("gridSquares");
+        container.appendChild(gridSquares);
+        gridSquares.style.cssText = `background-color: white; height: calc(100% / ${size}); width: calc(100% / ${size}); display: inline-flex; border: 3px solid black; border-top: none; border-left: none; margin-top: -4px;`;
+      }
+    } else if (size > 100) {
         alert("Number is too large");
     }
   });
