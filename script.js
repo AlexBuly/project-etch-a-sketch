@@ -22,49 +22,41 @@ squares the user wants.
 const container = document.querySelector(".container");
 // FOR i = gridSquares; i is less than or equal to 16; i++; 16 times
 for (let i = 0; i < 256; ++i) {
-  var squareDivs = document.createElement("div");
+  let squareDivs = document.createElement("div");
   squareDivs.classList.add("squareDivs");
   container.appendChild(squareDivs);
   squareDivs.style.cssText = "background-color: white; height: 29.5px; width: 29.5px; display: inline-flex; border: 3px solid black; border-top: none; border-left: none; margin-top: -4px;"
 }
   container.addEventListener("mouseover", (event) => {
-    var target = event.target
-    if (target.classList.contains("squareDivs")) {
-      target.style.backgroundColor = "black";
-    } else {
-        target.style.backgroundColor = "black";
-    }
+    let target = event.target
+    target.style.backgroundColor = "black";
+
   });
   // add click event listener for buttons
-  var eraser = document.querySelector(".erase");
+  let eraser = document.querySelector(".erase");
   eraser.addEventListener("click", () => {
     container.addEventListener("mouseover", (event) => {
       var target = event.target;
-      if (target.classList.contains("squareDivs")) {
-        target.style.backgroundColor = "white";
-      } else {
-          target.style.backgroundColor = "white";
-      }
+      target.style.backgroundColor = "white";
     });
   });
-  var reset = document.querySelector(".eraseAll");
+
+  let reset = document.querySelector(".eraseAll");
   reset.addEventListener("click", () => {
-    var squares = document.querySelectorAll(".squareDivs");
+    let squares = document.querySelectorAll(".squareDivs");
     squares.forEach((item) => {
       item.style.backgroundColor = "white";
    });
   });
-  var draw = document.querySelector(".pen");
+
+  let draw = document.querySelector(".pen");
   draw.addEventListener("click", () => {
     container.addEventListener("mouseover", (event) => {
       var target = event.target;
-      if (target.classList.contains("squareDivs")) {
-        target.style.backgroundColor = "black";
-      } else {
-          target.style.backgroundColor = "black"
-      }
+      target.style.backgroundColor = "black";
     });
   });
+
   let adjustSize = document.querySelector(".adjustSize");
   let squares = document.querySelectorAll(".squareDivs");
   adjustSize.addEventListener("click", () => {
