@@ -25,12 +25,11 @@ for (let i = 0; i < 256; ++i) {
   let squareDivs = document.createElement("div");
   squareDivs.classList.add("squareDivs");
   container.appendChild(squareDivs);
-  squareDivs.style.cssText = "background-color: white; height: 29.5px; width: 29.5px; display: inline-flex; border: 3px solid black; border-top: none; border-left: none; margin-top: -4px;"
+  squareDivs.style.cssText = "background-color: white; height: calc(100% / 16); width: calc(100% / 16); display: inline-flex; margin-bottom: -4px; flex-wrap: wrap;"
 }
   container.addEventListener("mouseover", (event) => {
     let target = event.target
     target.style.backgroundColor = "black";
-
   });
   // add click event listener for buttons
   let eraser = document.querySelector(".erase");
@@ -38,6 +37,7 @@ for (let i = 0; i < 256; ++i) {
     container.addEventListener("mouseover", (event) => {
       var target = event.target;
       target.style.backgroundColor = "white";
+      container.style.backgroundColor = "black";
     });
   });
 
@@ -67,13 +67,14 @@ for (let i = 0; i < 256; ++i) {
     let n = 0;
     while (n < size * size) {
       ++n;
-      let gridSquares = document.createElement("div");
+      var gridSquares = document.createElement("div");
       gridSquares.classList.add("squareDivs");
       container.appendChild(gridSquares);
-      gridSquares.style.cssText = `background-color: white; height: calc(100% / ${size}); width: calc(100% / ${size}); display: inline-flex; border: 3px solid black; border-top: none; border-left: none; margin-top: -4px;`
+      gridSquares.style.cssText = `background-color: white; height: calc(100% / ${size}); width: calc(100% / ${size}); display: inline-flex; margin-bottom: -4px;`
       } 
       if (size > 100) {
         alert("Number too large.");
+        gridSquares.remove()
       }
   });
 
