@@ -63,7 +63,7 @@ for (let i = 0; i < 256; ++i) {
     squares.forEach((item) => {
       item.remove();
     });
-  let size = Number(prompt("Enter a numer."));
+  let size = Number(prompt("Enter a number."));
   let n = 0;
   while (n < size) {
     ++n;
