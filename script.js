@@ -65,7 +65,8 @@ const sixteenGrid = () => {
   adjustSize.addEventListener("click", () => {
     squares.forEach((item) => {
       item.remove();
-    });
+      container.innerHTML = '';
+  });
     let size = Number(prompt("Enter a number."));
     let n = 0;
     if (size < 100) {
@@ -74,12 +75,11 @@ const sixteenGrid = () => {
         var gridSquares = document.createElement("div");
         gridSquares.classList.add("squareDivs");
         container.appendChild(gridSquares);
-        gridSquares.style.cssText = `background-color: white; height: calc(100% / ${size}); width: calc(100% / ${size}); display: inline-flex; margin-bottom: -4px; box-sizing: border-box; border: 1px solid black;`
+        gridSquares.style.cssText = `background-color: white; height: calc(100% / ${size}); width: calc(100% / ${size}); display: inline-flex; margin-bottom: -4px; padding; 0; box-sizing: border-box; border: 1px solid black;`;
         }
       } 
-    if (size > 100) {
+    else if (size > 100) {
         alert("Number too large.");
-        sixteenGrid();
       }
   });
 
@@ -87,7 +87,7 @@ const sixteenGrid = () => {
 
 // prompt("Number of squares")
 // IF number > 100 
-    //alert("Number is too large")
+//alert("Number is too large")
 // grow by X && shrink by X 
 // add appropriate numbers of squares 
 
