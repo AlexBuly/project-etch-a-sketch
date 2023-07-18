@@ -80,6 +80,7 @@ const sixteenGrid = () => {
       } 
     else if (size > 100) {
         alert("Number too large.");
+        sixteenGrid();
       }
   });
 
