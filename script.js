@@ -65,7 +65,7 @@ const sixteenGrid = () => {
   adjustSize.addEventListener("click", () => {
     squares.forEach((item) => {
       item.remove();
-      container.innerHTML = '';
+      container.textContent = '';
   });
     let size = Number(prompt("Enter a number."));
     let n = 0;
