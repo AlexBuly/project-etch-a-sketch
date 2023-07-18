@@ -26,7 +26,7 @@ const sixteenGrid = () => {
     let squareDivs = document.createElement("div");
     squareDivs.classList.add("squareDivs");
     container.appendChild(squareDivs);
-    squareDivs.style.cssText = "background-color: white; height: calc(100% / 16); width: calc(100% / 16); display: inline-flex; margin-bottom: -4px; flex-wrap: wrap; border: 1px solid black; box-sizing: border-box"
+    squareDivs.style.cssText = "background-color: white; height: calc(100% / 16); width: calc(100% / 16); display: inline-flex; border: 1px solid black; box-sizing: border-box"
   }
     container.addEventListener("mouseover", (event) => {
       let target = event.target
@@ -53,7 +53,7 @@ const sixteenGrid = () => {
     let draw = document.querySelector(".pen");
     draw.addEventListener("click", () => {
       container.addEventListener("mouseover", (event) => {
-        var target = event.target;
+        let target = event.target;
         target.style.backgroundColor = "black";
       });
     });
@@ -69,13 +69,13 @@ const sixteenGrid = () => {
   });
     let size = Number(prompt("Enter a number."));
     let n = 0;
-    if (size < 100) {
+    if (size <= 100) {
       while (n < size * size) {
         ++n;
-        var gridSquares = document.createElement("div");
+        let gridSquares = document.createElement("div");
         gridSquares.classList.add("squareDivs");
         container.appendChild(gridSquares);
-        gridSquares.style.cssText = `background-color: white; height: calc(100% / ${size}); width: calc(100% / ${size}); display: inline-flex; margin-bottom: -4px; padding; 0; box-sizing: border-box; border: 1px solid black;`;
+        gridSquares.style.cssText = `background-color: white; height: calc(100% / ${size}); width: calc(100% / ${size}); display: inline-flex; box-sizing: border-box; border: 1px solid black;`;
         }
       } 
     else if (size > 100) {
